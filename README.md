@@ -1,11 +1,11 @@
-About felyx-report
-==================
+About felyx-report-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/felyx-report-feedstock/blob/main/LICENSE.txt)
 
 Home: https://gitlab.ifremer.fr/felyx/felyx_report
 
 Package license: LGPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/felyx-report-feedstock/blob/main/LICENSE.txt)
 
 Summary: Produce monitoring report from data processed by Felyx processor
 
