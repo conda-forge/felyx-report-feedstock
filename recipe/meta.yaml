@@ -11,19 +11,19 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - felyx-report = felyx_report.cli.main:felyx_monitoring_report
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - poetry-core
     - poetry-dynamic-versioning
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - elasticsearch >=7.17.0,<7.18
     - pyarrow >=7.0.0,<8.0
     - pydantic >=1.9.0,<2.0
@@ -36,6 +36,8 @@ requirements:
     - netcdf4 >=1.5.4,<1.6
     
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - felyx_report
     
