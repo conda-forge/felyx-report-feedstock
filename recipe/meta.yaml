@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.ifremer.fr/felyx/felyx_report/-/archive/{{ version }}/felyx_report-{{ version }}.tar.gz
-  sha256: b7134fafbb0f3daf53a90d551e284a1f8e28edd30ecd
+  sha256: 7779a451d02b02bc75e64fc4904afcdedcd0e4e835ba118c47453c48f4533aed
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
