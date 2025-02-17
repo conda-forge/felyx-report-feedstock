@@ -1,5 +1,6 @@
 {% set name = "felyx-report" %}
-{% set version = "1.1.2" %}
+{% set version = "1.1.6" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://gitlab.ifremer.fr/felyx/felyx_report/-/archive/{{ version }}/felyx_report-{{ version }}.tar.gz
-  sha256: c9d821944a6387231acaf0d2b7467923a014fc8b2db55afed3cb5c8ed36cf67f
+  sha256: 7779a451d02b02bc75e64fc4904afcdedcd0e4e835ba118c47453c48f4533aed
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -34,13 +35,13 @@ requirements:
     - xarray >=0.19,<1.0
     - jinja2 >=3.0.3,<3.1
     - netcdf4 >=1.5.4,<1.6
-    
+
 test:
   requires:
     - python {{ python_min }}
   imports:
     - felyx_report
-    
+
 about:
   home: https://gitlab.ifremer.fr/felyx/felyx_report
   license: LGPL-3.0-only
@@ -49,4 +50,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - erwanbodere
+    - cso2943
+    - criou-cg
     - marie59
