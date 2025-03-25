@@ -12,7 +12,7 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 3
+  number: 4
   noarch: python
   entry_points:
     - felyx-report = felyx_report.cli.main:felyx_monitoring_report
@@ -29,6 +29,7 @@ requirements:
     - grafana-client >=3.5
     - pyarrow >=17.0,<18.0
     - pydantic ==2.9.1
+    - pydantic-settings >=2.4.0,<3.0.0
     - numpy >=1.22.2
     - pandas >=2.2
     - pyyaml >=6.0,<7.0
