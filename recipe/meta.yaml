@@ -12,7 +12,7 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 4
+  number: 5
   noarch: python
   entry_points:
     - felyx-report = felyx_report.cli.main:felyx_monitoring_report
@@ -35,6 +35,7 @@ requirements:
     - pyyaml >=6.0,<7.0
     - shapely ==2.0.6
     - xarray >=2024.10.0
+    - netcdf4 >=1.5.4
     - jinja2 >=3.1.2,<3.2
 test:
   requires:
